@@ -1,0 +1,85 @@
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: false
+configure_terminal: true
+configure_osx: true
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove: 
+- Launchpad
+- TV
+- Podcasts
+- 'App Store'
+- Contacts
+- Music
+- Maps
+- Facetime
+
+dockitems_persist: 
+- name: "Visual Studio Code"
+  path: "/Applications/Visual Studio Code.app/"
+  pos: 5
+
+configure_sudoers: false
+sudoers_custom_config: ''
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+# dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+# dotfiles_repo_accept_hostkey: true
+# dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+# dotfiles_files:
+#   - .zshrc
+#   - .gitignore
+#   - .inputrc
+#   - .osx
+#   - .vimrc
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - autoconf
+  - bash-completion
+  - doxygen
+  - git
+  - github/gh/gh
+  - libevent
+  - sqlite
+  - nmap
+  - node
+  - nvm
+  - ssh-copy-id
+  - openssl
+  - pv
+  - wget
+  - zsh-history-substring-search
+  - terraform
+  - awscli
+  - kubectl
+  - helm
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - chromedriver
+  - docker
+  - firefox
+  - google-chrome
+  - sequel-ace
+  - vagrant
+  - google-cloud-sdk
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
